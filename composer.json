@@ -1,0 +1,12 @@
+{
+  "name": "crowphp/badger-server",
+  "authors": [
+    {
+      "name": "Yousaf Syed",
+      "email": "mmesunny@gmail.com"
+    }
+  ],
+  "require": {
+    "crowphp/crow": "dev-master"
+  }
+}
