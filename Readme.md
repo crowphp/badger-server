@@ -12,3 +12,29 @@ Use our official docker image to spin a new badger service
 ```bash
 sudo docker run --name=badger --privileged --env SECRET_KEY=${provide-secret-key} -d --restart=unless-stopped -p 80:80 crowphp/badger-server:1.4
 ``` 
+
+## Endpoints
+
+`Creating/Updating`  new coverage report for a branch
+```bash
+curl --location --request POST 'http://localhost:5005/coverage/{branch}' \
+--header 'secret-key: Your-secret-here' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "schemaVersion": 1,
+  "label": "coverage",
+  "message": "80%",
+  "color": "yellow"
+}'
+``` 
+
+Notice the schema we are using the shields.io compatible json.
+
+`Retrieving`  the public coverage report for the `branch`
+
+```
+curl --location --request GET 'http://localhost:5005/coverage/{branch}'
+```
+
+That's It!
+Happy Coding.
