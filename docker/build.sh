@@ -5,7 +5,7 @@ display_usage() {
     echo -e "Commands:\n   image\t\tBuilds the images and pushes it to gcr\n"
 }
 
-GCR_PATH=crowphp/badger-server:1.0
+GCR_PATH=crowphp/badger-server:1.4
 LATEST=crowphp/badger-server:latest
 
 case $1 in

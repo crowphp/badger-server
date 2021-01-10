@@ -43,6 +43,9 @@ if (!$secretKey) {
     echo "SECRET_KEY environment variable is not defined" . PHP_EOL;
     exit(1);
 }
+if (!file_exists('./coverage')) {
+    mkdir('./coverage');
+}
 $app = CrowServer::create(CrowServer::SWOOLE_SERVER);
 $router = CrowRouter::make();
 $router->post('/coverage/{branch_name}', function (
@@ -81,7 +84,7 @@ $router->get('/coverage/{branch_name}', function (
 
 $app->withRouter($router);
 
-$app->on('start', function () {
-    echo "Badger server listening on 5005" . PHP_EOL;
+$app->on('start', function ($server) {
+    echo "Badger server listening on $server->host:$server->port" . PHP_EOL;
 });
-$app->listen(5005, "0.0.0.0");
+$app->listen(80, "0.0.0.0");

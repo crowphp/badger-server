@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/crowphp/crow.git",
-                "reference": "b0280bbb03d2aac3c53809450e39eac8c83c068d"
+                "reference": "64fe401d7a8f9c16032d98f06a6d94edf9516130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crowphp/crow/zipball/b0280bbb03d2aac3c53809450e39eac8c83c068d",
-                "reference": "b0280bbb03d2aac3c53809450e39eac8c83c068d",
+                "url": "https://api.github.com/repos/crowphp/crow/zipball/64fe401d7a8f9c16032d98f06a6d94edf9516130",
+                "reference": "64fe401d7a8f9c16032d98f06a6d94edf9516130",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "issues": "https://github.com/crowphp/crow/issues",
                 "source": "https://github.com/crowphp/crow/tree/master"
             },
-            "time": "2021-01-09T19:27:36+00:00"
+            "time": "2021-01-10T19:26:13+00:00"
         },
         {
             "name": "dflydev/fig-cookies",
