@@ -84,4 +84,4 @@ $app->withRouter($router);
 $app->on('start', function () {
     echo "Badger server listening on 5005" . PHP_EOL;
 });
-$app->listen(5005);
+$app->listen(5005, "0.0.0.0");
